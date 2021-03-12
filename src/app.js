@@ -1,10 +1,11 @@
 const express = require('express');
+const path = require('path');
+
+
 const app = express();
 
-app.get('/', (req, res)=>{
-	console.log("Ruta principal");
-	res.send("Hola mundoooooooooooooo");
-});
+//settings
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 module.exports = app;
